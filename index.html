@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+       
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    	<script>
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		function onDeviceReady() {
+			
+			
+		}
+		
+		function SomenteNumero(e){
+			var tecla=(window.event)?event.keyCode:e.which;   
+			if((tecla>47 && tecla<58)) return true;
+			else{
+				if (tecla==8 || tecla==0) return true;
+			else  return false;
+			}
+		}
+		
+		function calcular(compra,venda){
+			var desconto=venda-(venda*0.05);
+			var retorno= desconto-compra;
+			return retorno;
+		}
+		function resultado(){
+			var compra = $('#cpCompra').val();
+			var venda = $('#cpVenda').val();
+			var res=calcular(compra,venda);
+			$('#result').html('<h2>' + res.toFixed(0) + ' coins</h2>');
+			$('#myModal').modal('show');
+		}
+		</script>
+    
+        <title>Calculo de trade</title>
+    </head>
+    <body style="background-color:#BBF7E0">
+    	<div class="container">
+        <div class="row">&nbsp;</div>
+            <div class="row">
+                <img src="img/logo.png" class="img-responsive" style="width:100%">
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table text-center table-striped table-bordered" >
+                        <tr>
+                            <td>Comprou por:</td>
+                            <td><input id="cpCompra" type="number" placeholder="0.0" class="form-control" onkeypress='return SomenteNumero(event)'></td>
+                        </tr>
+                        <tr>
+                            <td>Vendeu Por:</td>
+                            <td><input id="cpVenda" type="number" placeholder="0.0" class="form-control" onkeypress='return SomenteNumero(event)'></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button class="btn btn-default" onClick="resultado()">Calcular</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    	</div>
+        <!-- /.MODAL -->
+        <div class="modal fade" id="myModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalTitulo">Resultado do cálculo</h4>
+              </div>
+              <div class="modal-body" id="result">
+                	
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </body>
+</html>
