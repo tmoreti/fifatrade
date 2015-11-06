@@ -4,8 +4,8 @@
     <description>
         Calculo de trade para o Fifa Ultimate Team
     </description>
-    <author email="thiago.moreti@gmail.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="thiago.moreti@gmail.com" href="">
+        Thiago Moreti
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
@@ -68,11 +68,11 @@
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    <allow-intent href="https://www.easports.com/fifa/ultimate-team/web-app" />
+    <allow-intent href="https://www.easports.com/fifa/ultimate-team/web-app" />
     <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
+    <allow-intent href="sms:11982441590" />
+    <allow-intent href="mailto:thiago.moreti@gmail.com" />
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
