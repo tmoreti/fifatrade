@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.fifatrader.fifatrade" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Fifa Trader - Cálculo</name>
+<widget id="com.ftrader.ftrader" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>F-Trader</name>
     <description>
-        Calculo de trade para o Fifa Ultimate Team
+        Calculo de trade para o Ultimate Team
     </description>
     <author email="thiago.moreti@gmail.com" href="">
         Thiago Moreti
